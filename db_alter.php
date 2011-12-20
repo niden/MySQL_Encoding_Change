@@ -141,8 +141,8 @@
 				// Alter field collation:
 				$field_name = mysql_real_escape_string($row['Field']);
 				
-				$fields_modify[] = "MODIFY `$field_name` $row[Type] CHARACTER SET BINARY";
-				$fields_change[] = "CHANGE `$field_name` `$field_name` $row[Type] "
+				$fields_modify[] = "MODIFY `$field_name` $row['Type'] CHARACTER SET BINARY";
+				$fields_change[] = "CHANGE `$field_name` `$field_name` $row['Type'] "
 								 . "CHARACTER SET $new_collation "
 								 . "COLLATE $to_encoding $nullable $default";
 			}
